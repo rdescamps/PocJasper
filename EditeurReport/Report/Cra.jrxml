@@ -57,14 +57,19 @@
 			</rectangle>
 		</band>
 	</title>
-	<columnHeader>
-		<band height="61" splitType="Stretch">
+	<detail>
+		<band height="400" splitType="Stretch">
+			<frame>
+				<reportElement x="260" y="10" width="530" height="390" uuid="923cebb4-8940-48db-89c9-1a0148a305f4"/>
+				<subreport>
+					<reportElement x="0" y="0" width="530" height="390" uuid="d0b25cb4-2465-404f-81b1-0c21bcd5b54d"/>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression><![CDATA["Callendar.jasper"]]></subreportExpression>
+				</subreport>
+			</frame>
 			<rectangle>
-				<reportElement x="12" y="5" width="778" height="50" uuid="6d50a32d-3800-4f68-be38-30dec38cf77e"/>
+				<reportElement x="12" y="10" width="241" height="390" uuid="61190ea5-1e06-4bde-b464-13ce45dc1667"/>
 			</rectangle>
 		</band>
-	</columnHeader>
-	<detail>
-		<band height="125" splitType="Stretch"/>
 	</detail>
 </jasperReport>

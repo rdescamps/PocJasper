@@ -1,13 +1,183 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.10.0.final using JasperReports Library version 6.10.0-unknown  -->
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Callendar" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1f4d6d11-0e2f-4c38-85f4-66fc76fda3a3">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="demo_calendar" columnCount="7" printOrder="Horizontal" pageWidth="792" pageHeight="612" orientation="Landscape" whenNoDataType="AllSectionsNoDetail" columnWidth="110" leftMargin="11" rightMargin="11" topMargin="6" bottomMargin="6" uuid="32abf871-39b8-4cc7-b03c-d950a55e2bfb">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="JRSrepo"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<style name="Style1" forecolor="#050505">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{id}.intValue()%7==1]]></conditionExpression>
+			<style forecolor="#FA0702"/>
+		</conditionalStyle>
+	</style>
+	<parameter name="Date" class="java.sql.Timestamp">
+		<defaultValueExpression><![CDATA[new Date()]]></defaultValueExpression>
+	</parameter>
+	<parameter name="DOW" class="java.lang.Integer" isForPrompting="false">
+		<defaultValueExpression><![CDATA[new Date($P{Date}.getYear(),$P{Date}.getMonth(),1).getDay()+1]]></defaultValueExpression>
+	</parameter>
+	<parameter name="DOM" class="java.lang.Integer" isForPrompting="false">
+		<defaultValueExpression><![CDATA[$P{Date}.getMonth()+1]]></defaultValueExpression>
+	</parameter>
+	<parameter name="DOY" class="java.lang.Integer" isForPrompting="false">
+		<defaultValueExpression><![CDATA[$P{Date}.getYear()+1900]]></defaultValueExpression>
+	</parameter>
+	<parameter name="Days" class="java.lang.Integer" isForPrompting="false">
+		<defaultValueExpression><![CDATA[java.time.YearMonth.of($P{DOY}.intValue(), $P{DOM}.intValue()).lengthOfMonth()]]></defaultValueExpression>
+	</parameter>
+	<parameter name="Cells" class="java.lang.Integer" isForPrompting="false">
+		<defaultValueExpression><![CDATA[$P{DOW}.intValue()-1+$P{Days}.intValue()]]></defaultValueExpression>
+	</parameter>
+	<parameter name="Limit" class="java.lang.Integer" isForPrompting="false">
+		<defaultValueExpression><![CDATA[$P{Cells}.intValue()>28?($P{Cells}.intValue()>35?42:35):28]]></defaultValueExpression>
+	</parameter>
 	<queryString>
-		<![CDATA[]]>
+		<![CDATA[SELECT i as id FROM generate_series(1, $P!{Limit} ) i]]>
 	</queryString>
-	<background>
-		<band splitType="Stretch"/>
-	</background>
+	<field name="id" class="java.lang.Integer"/>
+	<variable name="Date" class="java.lang.Integer">
+		<variableExpression><![CDATA[$F{id}.intValue()-$P{DOW}.intValue()+1]]></variableExpression>
+	</variable>
+	<title>
+		<band height="60">
+			<textField pattern="yyyy MMMM">
+				<reportElement x="0" y="0" width="770" height="30" uuid="21293131-3839-43aa-b449-b19867eee2da"/>
+				<textElement textAlignment="Center">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Date}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="30" width="110" height="30" forecolor="#FFFCFC" backcolor="#FC0703" uuid="11cb3d1f-777b-43cb-a053-11f27f46d99b">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFCFC"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sunday]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="110" y="30" width="110" height="30" forecolor="#FFFCFC" backcolor="#403D3D" uuid="35ef4490-9b76-4251-bc43-7f59a9ab19c2">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Monday]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="220" y="30" width="110" height="30" forecolor="#FFFCFC" backcolor="#403D3D" uuid="33eb161b-40bb-4a2d-9b85-6ba67461b4f6">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tuesday]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="330" y="30" width="110" height="30" forecolor="#FFFCFC" backcolor="#403D3D" uuid="5e4c7405-352c-4058-b0ef-bd52d766e00b">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Wednesday]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="440" y="30" width="110" height="30" forecolor="#FFFCFC" backcolor="#403D3D" uuid="81be3ac1-c1c1-4573-86a7-67c891288f1c">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Thursday]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="550" y="30" width="110" height="30" forecolor="#FFFCFC" backcolor="#403D3D" uuid="9442d83e-3726-4db9-8746-04b2fea1449b">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Friday]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="660" y="30" width="110" height="30" forecolor="#FFFCFC" backcolor="#403D3D" uuid="edc883b5-0e35-4e17-8a45-56efc9dacf6a">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Saturday]]></text>
+			</staticText>
+		</band>
+	</title>
 	<detail>
-		<band height="125" splitType="Stretch"/>
+		<band height="90" splitType="Stretch">
+			<frame>
+				<reportElement x="0" y="0" width="110" height="90" uuid="75440275-c439-4c3e-bb77-f9f4d8f48415">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textField>
+					<reportElement style="Style1" x="60" y="1" width="50" height="30" isRemoveLineWhenBlank="true" uuid="733ff549-0109-4f55-b9de-476f0ad9fbeb">
+						<printWhenExpression><![CDATA[$V{Date}.intValue()>0&&$V{Date}.intValue()<=$P{Days}.intValue()]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Right">
+						<font size="16" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{Date}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
 	</detail>
 </jasperReport>
