@@ -1,30 +1,34 @@
 package bean;
 
+/**
+ * @author rdescamps
+ *
+ */
 public class RapportActiviteConges {
 	
 	private String intituleConge;
-	private String jour;
-	private String valeurMille;
-	
+	private Integer jourConge;
+	private Integer valeurMilleConge;
 	public String getIntituleConge() {
 		return intituleConge;
 	}
 	public void setIntituleConge(String intituleConge) {
 		this.intituleConge = intituleConge;
 	}
-	public String getJour() {
-		return jour;
+	public Integer getJourConge() {
+		return jourConge;
 	}
-	public void setJour(String jour) {
-		this.jour = jour;
+	public void setJourConge(Integer jourConge) {
+		this.jourConge = jourConge;
 	}
-	public String getValeurMille() {
-		return valeurMille;
+	public Integer getValeurMilleConge() {
+		return valeurMilleConge;
 	}
-	public void setValeurMille(String valeurMille) {
-		this.valeurMille = valeurMille;
+	public void setValeurMilleConge(Integer valeurMilleConge) {
+		this.valeurMilleConge = valeurMilleConge;
 	}
 	
+
 	
 
 }

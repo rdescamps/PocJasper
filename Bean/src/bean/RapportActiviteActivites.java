@@ -2,28 +2,29 @@ package bean;
 
 public class RapportActiviteActivites {
 	
-	private String intituleOm;
-	private String valeurMille;
-	private String jour;
+	private String intituleActivite;
+	private Integer valeurMilleActivite;
+	private Integer jourActivite;
+	public String getIntituleActivite() {
+		return intituleActivite;
+	}
+	public void setIntituleActivite(String intituleActivite) {
+		this.intituleActivite = intituleActivite;
+	}
+	public Integer getValeurMilleActivite() {
+		return valeurMilleActivite;
+	}
+	public void setValeurMilleActivite(Integer valeurMilleActivite) {
+		this.valeurMilleActivite = valeurMilleActivite;
+	}
+	public Integer getJourActivite() {
+		return jourActivite;
+	}
+	public void setJourActivite(Integer jourActivite) {
+		this.jourActivite = jourActivite;
+	}
 	
-	public String getIntituleOm() {
-		return intituleOm;
-	}
-	public void setIntituleOm(String intituleOm) {
-		this.intituleOm = intituleOm;
-	}
-	public String getValeurMille() {
-		return valeurMille;
-	}
-	public void setValeurMille(String valeurMille) {
-		this.valeurMille = valeurMille;
-	}
-	public String getJour() {
-		return jour;
-	}
-	public void setJour(String jour) {
-		this.jour = jour;
-	}
+
 	
 
 }

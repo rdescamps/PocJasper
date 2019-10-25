@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.10.0.final using JasperReports Library version 6.10.0-unknown  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Cra" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e6ea3652-f6cb-4d52-acf0-912d7b0c4668">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="TestActi"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="nomCollaborateur" class="java.lang.String">
+		<fieldDescription><![CDATA[nomCollaborateur]]></fieldDescription>
+	</field>
+	<field name="activites" class="net.sf.jasperreports.engine.JRDataSource">
+		<fieldDescription><![CDATA[activites]]></fieldDescription>
+	</field>
+	<field name="annee" class="java.lang.Integer">
+		<fieldDescription><![CDATA[annee]]></fieldDescription>
+	</field>
+	<field name="conges" class="net.sf.jasperreports.engine.JRDataSource">
+		<fieldDescription><![CDATA[conges]]></fieldDescription>
+	</field>
+	<field name="om" class="net.sf.jasperreports.engine.JRDataSource">
+		<fieldDescription><![CDATA[om]]></fieldDescription>
+	</field>
+	<field name="prenomCollaborateur" class="java.lang.String">
+		<fieldDescription><![CDATA[prenomCollaborateur]]></fieldDescription>
+	</field>
+	<field name="mois" class="java.lang.Integer">
+		<fieldDescription><![CDATA[mois]]></fieldDescription>
+	</field>
+	<field name="intituleActivite" class="java.lang.String">
+		<fieldDescription><![CDATA[intituleActivite]]></fieldDescription>
+	</field>
+	<field name="jourActivite" class="java.lang.Integer">
+		<fieldDescription><![CDATA[jourActivite]]></fieldDescription>
+	</field>
+	<field name="valeurMilleActivite" class="java.lang.Integer">
+		<fieldDescription><![CDATA[valeurMilleActivite]]></fieldDescription>
+	</field>
+	<field name="jourConge" class="java.lang.Integer">
+		<fieldDescription><![CDATA[jourConge]]></fieldDescription>
+	</field>
+	<field name="intituleConge" class="java.lang.String">
+		<fieldDescription><![CDATA[intituleConge]]></fieldDescription>
+	</field>
+	<field name="valeurMilleConge" class="java.lang.Integer">
+		<fieldDescription><![CDATA[valeurMilleConge]]></fieldDescription>
+	</field>
+	<field name="nomOm" class="java.lang.String">
+		<fieldDescription><![CDATA[nomOm]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="61" splitType="Stretch">
+			<rectangle>
+				<reportElement x="12" y="0" width="778" height="56" uuid="aa610370-7980-4044-822f-9aed6040998a"/>
+			</rectangle>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<rectangle>
+				<reportElement x="12" y="5" width="778" height="50" uuid="6d50a32d-3800-4f68-be38-30dec38cf77e"/>
+			</rectangle>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+</jasperReport>

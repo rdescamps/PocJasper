@@ -11,9 +11,8 @@ public class RapportActivite {
 	private JRDataSource conges;
 	private JRDataSource om;
 	  
-	private String mois;
-	private String annee;
-	  
+	private Integer mois;
+	private Integer annee;
 	
 	public String getNomCollaborateur() {
 		return nomCollaborateur;
@@ -45,18 +44,20 @@ public class RapportActivite {
 	public void setOm(JRDataSource om) {
 		this.om = om;
 	}
-	public String getMois() {
+	public Integer getMois() {
 		return mois;
 	}
-	public void setMois(String mois) {
+	public void setMois(Integer mois) {
 		this.mois = mois;
 	}
-	public String getAnnee() {
+	public Integer getAnnee() {
 		return annee;
 	}
-	public void setAnnee(String annee) {
+	public void setAnnee(Integer annee) {
 		this.annee = annee;
 	}
+	  
+
 
 
 	

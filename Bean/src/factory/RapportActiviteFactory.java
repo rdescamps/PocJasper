@@ -19,11 +19,11 @@ public class RapportActiviteFactory {
 		RapportActiviteConges conges=new RapportActiviteConges();
 		
 		String intituleOm = "test";
-		String valeurMille = "1000";
-		String jour = "1";
+		int valeurMille = 1000;
+		int jour = 11;
 		conges.setIntituleConge(intituleOm);
-		conges.setJour(jour);
-		conges.setValeurMille(valeurMille);
+		conges.setJourConge(jour);
+		conges.setValeurMilleConge(valeurMille);
 		listConges.add(conges);
 		return listConges;
 	}
@@ -34,11 +34,11 @@ public class RapportActiviteFactory {
 		RapportActiviteActivites activites=new RapportActiviteActivites();
 		
 		String intituleOm = "test";
-		String valeurMille = "1000";
-		String jour = "2";
-		activites.setIntituleOm(intituleOm);
-		activites.setJour(jour);
-		activites.setValeurMille(valeurMille);
+		int valeurMille = 1000;
+		int jour = 2;
+		activites.setIntituleActivite(intituleOm);
+		activites.setJourActivite(jour);
+		activites.setValeurMilleActivite(valeurMille);
 		
 		listActivites.add(activites);
 		
@@ -63,8 +63,8 @@ public class RapportActiviteFactory {
 		
 		List<RapportActivite> rapportList=new ArrayList<RapportActivite>();
 		RapportActivite rapport = new RapportActivite();
-		String mois = "9";
-		String annee = "2019";
+		int mois = 9;
+		int annee = 2019;
 		String nomCollaborateur = "test";
 		String prenomCollaborateur = "test";
 		
