@@ -1,5 +1,7 @@
 package bean;
 
+import java.util.Date;
+
 import net.sf.jasperreports.engine.JRDataSource;
 
 public class RapportActivite {
@@ -13,6 +15,8 @@ public class RapportActivite {
 	  
 	private Integer mois;
 	private Integer annee;
+	
+	private Date date;
 	
 	public String getNomCollaborateur() {
 		return nomCollaborateur;
@@ -55,6 +59,12 @@ public class RapportActivite {
 	}
 	public void setAnnee(Integer annee) {
 		this.annee = annee;
+	}
+	public Date getDate() {
+		return date;
+	}
+	public void setDate(Date date) {
+		this.date = date;
 	}
 	  
 

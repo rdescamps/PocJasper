@@ -47,28 +47,116 @@
 	<field name="nomOm" class="java.lang.String">
 		<fieldDescription><![CDATA[nomOm]]></fieldDescription>
 	</field>
+	<field name="Lundi" class="java.lang.String"/>
+	<field name="Mardi" class="java.lang.String"/>
+	<field name="Mercredi" class="java.lang.String"/>
+	<field name="Jeudi" class="java.lang.String"/>
+	<field name="Vendredi" class="java.lang.String"/>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="61" splitType="Stretch">
+		<band height="35" splitType="Stretch">
 			<rectangle>
-				<reportElement x="12" y="0" width="778" height="56" uuid="aa610370-7980-4044-822f-9aed6040998a"/>
+				<reportElement x="12" y="0" width="778" height="30" uuid="aa610370-7980-4044-822f-9aed6040998a"/>
 			</rectangle>
 		</band>
 	</title>
 	<detail>
-		<band height="400" splitType="Stretch">
+		<band height="555" splitType="Stretch">
 			<frame>
-				<reportElement x="260" y="10" width="530" height="390" uuid="923cebb4-8940-48db-89c9-1a0148a305f4"/>
-				<subreport>
-					<reportElement x="0" y="0" width="530" height="390" uuid="d0b25cb4-2465-404f-81b1-0c21bcd5b54d"/>
-					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
-					<subreportExpression><![CDATA["Callendar.jasper"]]></subreportExpression>
-				</subreport>
+				<reportElement x="240" y="10" width="550" height="545" uuid="923cebb4-8940-48db-89c9-1a0148a305f4"/>
+				<staticText>
+					<reportElement mode="Opaque" x="0" y="10" width="110" height="30" forecolor="#FFFCFC" backcolor="#403D3D" uuid="a0c2069c-1dd1-494a-b50a-1f75f303b997">
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Center">
+						<font size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Lundi]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="110" y="10" width="110" height="30" forecolor="#FFFCFC" backcolor="#403D3D" uuid="7edfc69b-a4f9-4065-b98e-1f03ac8c0b2b">
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Center">
+						<font size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Mardi]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="220" y="10" width="110" height="30" forecolor="#FFFCFC" backcolor="#403D3D" uuid="3aa6f22d-6ca4-4a1f-bbd9-495e7833263a">
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Center">
+						<font size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Mercredi]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="330" y="10" width="110" height="30" forecolor="#FFFCFC" backcolor="#403D3D" uuid="d3ee9228-baae-48aa-a2e8-d5bb63acf276">
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Center">
+						<font size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Jeudi]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="440" y="10" width="110" height="30" forecolor="#FFFCFC" backcolor="#403D3D" uuid="7e5c091a-3738-426e-be61-ad1b1d023ab3">
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Center">
+						<font size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Vendredi]]></text>
+				</staticText>
+				<frame>
+					<reportElement x="0" y="40" width="110" height="100" uuid="75440275-c439-4c3e-bb77-f9f4d8f48415">
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid"/>
+					</box>
+				</frame>
 			</frame>
 			<rectangle>
-				<reportElement x="12" y="10" width="241" height="390" uuid="61190ea5-1e06-4bde-b464-13ce45dc1667"/>
+				<reportElement x="12" y="20" width="218" height="535" uuid="61190ea5-1e06-4bde-b464-13ce45dc1667"/>
 			</rectangle>
 		</band>
 	</detail>
