@@ -5,10 +5,11 @@ public class RapportActiviteActivites {
 	private String intituleActivite;
 	private Integer valeurMilleActivite;
 	private Integer jourActivite;
-	public String getIntituleActivite() {
+	
+	public String getintituleActivite() {
 		return intituleActivite;
 	}
-	public void setIntituleActivite(String intituleActivite) {
+	public void setintituleActivite(String intituleActivite) {
 		this.intituleActivite = intituleActivite;
 	}
 	public Integer getValeurMilleActivite() {

@@ -13,7 +13,7 @@ import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 
 public class RapportActiviteFactory {
 	
-	private static Collection<RapportActiviteConges> loadConges() {
+	public static Collection<RapportActiviteConges> loadConges() {
 		
 		List<RapportActiviteConges> listConges=new ArrayList<>();
 		RapportActiviteConges conges=new RapportActiviteConges();
@@ -28,7 +28,7 @@ public class RapportActiviteFactory {
 		return listConges;
 	}
 
-	private static Collection<RapportActiviteActivites> loadActivites() {
+	public static Collection<RapportActiviteActivites> loadActivites() {
 		
 		List<RapportActiviteActivites> listActivites=new ArrayList<>();
 		RapportActiviteActivites activites=new RapportActiviteActivites();
@@ -36,7 +36,7 @@ public class RapportActiviteFactory {
 		String intituleOm = "test";
 		int valeurMille = 1000;
 		int jour = 2;
-		activites.setIntituleActivite(intituleOm);
+		activites.setintituleActivite(intituleOm);
 		activites.setJourActivite(jour);
 		activites.setValeurMilleActivite(valeurMille);
 		
@@ -46,13 +46,13 @@ public class RapportActiviteFactory {
 		return listActivites;
 	}
 
-	private static Collection<RapportActiviteOm> loadOm() {
+	public static Collection<RapportActiviteOm> loadOm() {
 		
 		List<RapportActiviteOm> listOm=new ArrayList<>();
 		RapportActiviteOm om=new RapportActiviteOm();
 		
 	    String nomOm = "bidon";
-		om.setNomOm(nomOm);
+		om.setIntituleOm(nomOm);
 		
 		listOm.add(om);
 			
@@ -67,20 +67,23 @@ public class RapportActiviteFactory {
 		int annee = 2019;
 		String nomCollaborateur = "test";
 		String prenomCollaborateur = "test";
+	
+	
 		
 		rapport.setMois(mois);
 		rapport.setAnnee(annee);
+	
 		
 		rapport.setNomCollaborateur(nomCollaborateur);
 		rapport.setPrenomCollaborateur(prenomCollaborateur);
 		
-		JRDataSource om=new JRBeanCollectionDataSource(loadOm());
+		JRDataSource om=new JRBeanCollectionDataSource(loadOm(),false);
 	        rapport.setOm(om);
 	        
-	    JRDataSource activites=new JRBeanCollectionDataSource(loadActivites());
+	    JRDataSource activites=new JRBeanCollectionDataSource(loadActivites(),false);
 	        rapport.setActivites(activites);
 		
-	    JRDataSource conges=new JRBeanCollectionDataSource(loadConges());
+	    JRDataSource conges=new JRBeanCollectionDataSource(loadConges(),false);
 	        rapport.setConges(conges);
 	
 		

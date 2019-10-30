@@ -1,15 +1,18 @@
 package bean;
 
+
 public class RapportActiviteOm {
 	
-	private String nomOm;
+	private String intituleOm;
 
-	public String getNomOm() {
-		return nomOm;
+	public String getIntituleOm() {
+		return intituleOm;
 	}
 
-	public void setNomOm(String nomOm) {
-		this.nomOm = nomOm;
+	public void setIntituleOm(String intituleOm) {
+		this.intituleOm = intituleOm;
 	}
+
+
 
 }

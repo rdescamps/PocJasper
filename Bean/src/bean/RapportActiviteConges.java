@@ -9,6 +9,7 @@ public class RapportActiviteConges {
 	private String intituleConge;
 	private Integer jourConge;
 	private Integer valeurMilleConge;
+	
 	public String getIntituleConge() {
 		return intituleConge;
 	}

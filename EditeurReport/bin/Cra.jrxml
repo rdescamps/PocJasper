@@ -5,6 +5,27 @@
 	<queryString>
 		<![CDATA[]]>
 	</queryString>
+	<field name="jourConge" class="java.lang.Integer">
+		<fieldDescription><![CDATA[jourConge]]></fieldDescription>
+	</field>
+	<field name="intituleConge" class="java.lang.String">
+		<fieldDescription><![CDATA[intituleConge]]></fieldDescription>
+	</field>
+	<field name="valeurMilleConge" class="java.lang.Integer">
+		<fieldDescription><![CDATA[valeurMilleConge]]></fieldDescription>
+	</field>
+	<field name="intituleActivite" class="java.lang.String">
+		<fieldDescription><![CDATA[intituleActivite]]></fieldDescription>
+	</field>
+	<field name="jourActivite" class="java.lang.Integer">
+		<fieldDescription><![CDATA[jourActivite]]></fieldDescription>
+	</field>
+	<field name="valeurMilleActivite" class="java.lang.Integer">
+		<fieldDescription><![CDATA[valeurMilleActivite]]></fieldDescription>
+	</field>
+	<field name="date" class="java.util.Date">
+		<fieldDescription><![CDATA[date]]></fieldDescription>
+	</field>
 	<field name="nomCollaborateur" class="java.lang.String">
 		<fieldDescription><![CDATA[nomCollaborateur]]></fieldDescription>
 	</field>
@@ -26,32 +47,6 @@
 	<field name="mois" class="java.lang.Integer">
 		<fieldDescription><![CDATA[mois]]></fieldDescription>
 	</field>
-	<field name="intituleActivite" class="java.lang.String">
-		<fieldDescription><![CDATA[intituleActivite]]></fieldDescription>
-	</field>
-	<field name="jourActivite" class="java.lang.Integer">
-		<fieldDescription><![CDATA[jourActivite]]></fieldDescription>
-	</field>
-	<field name="valeurMilleActivite" class="java.lang.Integer">
-		<fieldDescription><![CDATA[valeurMilleActivite]]></fieldDescription>
-	</field>
-	<field name="jourConge" class="java.lang.Integer">
-		<fieldDescription><![CDATA[jourConge]]></fieldDescription>
-	</field>
-	<field name="intituleConge" class="java.lang.String">
-		<fieldDescription><![CDATA[intituleConge]]></fieldDescription>
-	</field>
-	<field name="valeurMilleConge" class="java.lang.Integer">
-		<fieldDescription><![CDATA[valeurMilleConge]]></fieldDescription>
-	</field>
-	<field name="nomOm" class="java.lang.String">
-		<fieldDescription><![CDATA[nomOm]]></fieldDescription>
-	</field>
-	<field name="Lundi" class="java.lang.String"/>
-	<field name="Mardi" class="java.lang.String"/>
-	<field name="Mercredi" class="java.lang.String"/>
-	<field name="Jeudi" class="java.lang.String"/>
-	<field name="Vendredi" class="java.lang.String"/>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
@@ -64,6 +59,9 @@
 	</title>
 	<detail>
 		<band height="555" splitType="Stretch">
+			<rectangle>
+				<reportElement x="12" y="20" width="218" height="535" uuid="61190ea5-1e06-4bde-b464-13ce45dc1667"/>
+			</rectangle>
 			<frame>
 				<reportElement x="240" y="10" width="550" height="545" uuid="923cebb4-8940-48db-89c9-1a0148a305f4"/>
 				<staticText>
@@ -155,9 +153,22 @@
 					</box>
 				</frame>
 			</frame>
-			<rectangle>
-				<reportElement x="12" y="20" width="218" height="535" uuid="61190ea5-1e06-4bde-b464-13ce45dc1667"/>
-			</rectangle>
+			<textField>
+				<reportElement x="60" y="40" width="49" height="30" uuid="cf97a4a8-a534-44e5-ad59-5a51f84c3af2"/>
+				<textFieldExpression><![CDATA[$F{mois}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="40" width="70" height="30" uuid="7144143e-f56f-432b-a870-bab53dc1780c"/>
+				<textFieldExpression><![CDATA[$F{annee}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="140" width="100" height="30" uuid="25a39cea-98fd-45e7-b273-efcccb6b93e2"/>
+				<textFieldExpression><![CDATA[$F{nomOm}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="140" width="100" height="30" uuid="7821d1be-6c15-4433-a959-1dad401b2051"/>
+				<text><![CDATA[nomOm]]></text>
+			</staticText>
 		</band>
 	</detail>
 </jasperReport>
