@@ -27,7 +27,7 @@
 					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textField>
-					<reportElement x="6" y="21" width="100" height="30" uuid="425e9d6f-ae53-423a-a360-f3c2a31805c0"/>
+					<reportElement x="6" y="11" width="100" height="30" uuid="425e9d6f-ae53-423a-a360-f3c2a31805c0"/>
 					<textFieldExpression><![CDATA[$F{intituleActivite}]]></textFieldExpression>
 				</textField>
 				<textField>

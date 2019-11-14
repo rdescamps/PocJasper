@@ -27,10 +27,20 @@
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="35" splitType="Stretch">
+		<band height="43" splitType="Stretch">
 			<rectangle>
 				<reportElement x="12" y="0" width="778" height="30" uuid="aa610370-7980-4044-822f-9aed6040998a"/>
 			</rectangle>
+			<textField>
+				<reportElement x="90" y="0" width="100" height="30" uuid="3a880ca5-3a31-4110-ab3f-a08618a2fac3"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nomCollaborateur}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="0" width="100" height="30" uuid="e3df3fe6-d2f6-430d-8909-bd3bf32dbb4d"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{prenomCollaborateur}]]></textFieldExpression>
+			</textField>
 		</band>
 	</title>
 	<detail>
@@ -122,8 +132,12 @@
 				</subreport>
 			</frame>
 			<textField>
-				<reportElement x="140" y="40" width="49" height="30" uuid="cf97a4a8-a534-44e5-ad59-5a51f84c3af2"/>
+				<reportElement x="50" y="30" width="49" height="30" uuid="cf97a4a8-a534-44e5-ad59-5a51f84c3af2"/>
 				<textFieldExpression><![CDATA[$F{mois}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="30" width="100" height="30" uuid="7d03ab26-672e-4504-a88f-797eb8095701"/>
+				<textFieldExpression><![CDATA[$F{annee}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
