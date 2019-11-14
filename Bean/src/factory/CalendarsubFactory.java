@@ -10,13 +10,13 @@ public class CalendarsubFactory {
 	
 	private static Calendarsubbean[] data =
 		{
-			new Calendarsubbean("test", new Integer(3), new Integer(1000),new Integer(1),new Integer(0)),
-			new Calendarsubbean("test", new Integer(4), new Integer(1000),new Integer(2),new Integer(0)),
-			new Calendarsubbean("test", new Integer(5), new Integer(1000),new Integer(3),new Integer(0)),
-			new Calendarsubbean("test", new Integer(6), new Integer(1000),new Integer(4),new Integer(0)),
-			new Calendarsubbean("test", new Integer(7), new Integer(1000),new Integer(5),new Integer(0)),
-			new Calendarsubbean("test", new Integer(10), new Integer(1000),new Integer(6),new Integer(0)),
-			new Calendarsubbean("test", new Integer(11), new Integer(1000),new Integer(7),new Integer(0))
+			new Calendarsubbean("Vendredi", new Integer(1), new Integer(11), new Integer(2019), new Integer(1000),new Integer(1),new Integer(0)),
+			new Calendarsubbean("Lundi", new Integer(4), new Integer(11), new Integer(2019), new Integer(1000),new Integer(2),new Integer(0)),
+			new Calendarsubbean("Mardi", new Integer(5), new Integer(11), new Integer(2019), new Integer(1000),new Integer(3),new Integer(0)),
+			new Calendarsubbean("Mercredi", new Integer(6), new Integer(11), new Integer(2019), new Integer(1000),new Integer(4),new Integer(0)),
+			new Calendarsubbean("Jeudi", new Integer(7), new Integer(11), new Integer(2019), new Integer(1000),new Integer(5),new Integer(0)),
+			new Calendarsubbean("Vendredi", new Integer(8), new Integer(11), new Integer(2019), new Integer(1000),new Integer(6),new Integer(0)),
+			new Calendarsubbean("Lundi", new Integer(11), new Integer(11), new Integer(2019), new Integer(1000),new Integer(7),new Integer(0))
 
 		};  
 			
