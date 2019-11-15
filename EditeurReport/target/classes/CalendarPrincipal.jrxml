@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.10.0.final using JasperReports Library version 6.10.0-unknown  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Cra" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e6ea3652-f6cb-4d52-acf0-912d7b0c4668">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="CalendarPrincipal "/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="moisCourant" class="java.lang.Integer">
+		<fieldDescription><![CDATA[moisCourant]]></fieldDescription>
+	</field>
+	<field name="nom" class="java.lang.String">
+		<fieldDescription><![CDATA[nom]]></fieldDescription>
+	</field>
+	<field name="anneeCourante" class="java.lang.Integer">
+		<fieldDescription><![CDATA[anneeCourante]]></fieldDescription>
+	</field>
+	<field name="activite" class="net.sf.jasperreports.engine.JRDataSource">
+		<fieldDescription><![CDATA[activite]]></fieldDescription>
+	</field>
+	<field name="prenom" class="java.lang.String">
+		<fieldDescription><![CDATA[prenom]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="555" splitType="Stretch">
+			<rectangle>
+				<reportElement x="10" y="10" width="250" height="531" uuid="61190ea5-1e06-4bde-b464-13ce45dc1667"/>
+			</rectangle>
+			<frame>
+				<reportElement x="290" y="0" width="510" height="554" uuid="923cebb4-8940-48db-89c9-1a0148a305f4">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<staticText>
+					<reportElement mode="Opaque" x="10" y="10" width="100" height="30" forecolor="#FFFCFC" backcolor="#403D3D" uuid="a0c2069c-1dd1-494a-b50a-1f75f303b997">
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Center">
+						<font size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Lundi]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="110" y="10" width="100" height="30" forecolor="#FFFCFC" backcolor="#403D3D" uuid="7edfc69b-a4f9-4065-b98e-1f03ac8c0b2b">
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Center">
+						<font size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Mardi]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="210" y="10" width="100" height="30" forecolor="#FFFCFC" backcolor="#403D3D" uuid="3aa6f22d-6ca4-4a1f-bbd9-495e7833263a">
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Center">
+						<font size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Mercredi]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="310" y="10" width="100" height="30" forecolor="#FFFCFC" backcolor="#403D3D" uuid="d3ee9228-baae-48aa-a2e8-d5bb63acf276">
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Center">
+						<font size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Jeudi]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="410" y="10" width="100" height="30" forecolor="#FFFCFC" backcolor="#403D3D" uuid="7e5c091a-3738-426e-be61-ad1b1d023ab3">
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Center">
+						<font size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Vendredi]]></text>
+				</staticText>
+				<subreport isUsingCache="true">
+					<reportElement x="10" y="40" width="500" height="501" uuid="60c93258-9e85-4a11-91be-6b176294c09c"/>
+					<subreportParameter name="moisCourant">
+						<subreportParameterExpression><![CDATA[$F{moisCourant}]]></subreportParameterExpression>
+					</subreportParameter>
+					<dataSourceExpression><![CDATA[$F{activite}]]></dataSourceExpression>
+					<subreportExpression><![CDATA["calendarsubactivite.jasper"]]></subreportExpression>
+				</subreport>
+			</frame>
+			<textField>
+				<reportElement x="100" y="70" width="100" height="30" uuid="a88bdbb7-de85-4ebd-a86b-cfc37a18437c"/>
+				<textFieldExpression><![CDATA[$F{moisCourant}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="50" y="240" width="100" height="30" uuid="604dc6d6-c859-4430-bc6e-961fe5a1ea96"/>
+				<textFieldExpression><![CDATA[$P{REPORT_DATA_SOURCE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="109" y="361" width="100" height="30" uuid="e8272781-63ca-4058-af38-7bf2e7108a9b"/>
+				<textFieldExpression><![CDATA[$P{REPORT_CONTEXT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="119" y="450" width="100" height="30" uuid="0bed7ffc-1e27-4087-82fc-5b82bd66f85d"/>
+				<textFieldExpression><![CDATA[$P{JASPER_REPORTS_CONTEXT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="116" y="304" width="100" height="30" uuid="c8001ff1-e332-45a8-9052-f1094579363d"/>
+				<textFieldExpression><![CDATA[$P{REPORT_MAX_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="79" y="149" width="100" height="30" uuid="5699a1de-5dca-4581-86ac-455bd081d8c0"/>
+				<textFieldExpression><![CDATA[$P{REPORT_FORMAT_FACTORY}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

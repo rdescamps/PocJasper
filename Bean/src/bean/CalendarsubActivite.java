@@ -1,6 +1,6 @@
 package bean;
 
-public class Calendarsubbean {
+public class CalendarsubActivite {
 	
 	private String intitule;
 	private int jour;
@@ -11,7 +11,7 @@ public class Calendarsubbean {
 	private int type;
 	
 	
-	public Calendarsubbean(String intitule, int jour, int mois, int annee, int valeurMille, int id, int type) {
+	public CalendarsubActivite(String intitule, int jour, int mois, int annee, int valeurMille, int id, int type) {
 		super();
 		this.intitule = intitule;
 		this.jour = jour;

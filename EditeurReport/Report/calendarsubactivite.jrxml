@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.10.0.final using JasperReports Library version 6.10.0-unknown  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="calendarsub" columnCount="5" printOrder="Horizontal" pageWidth="500" pageHeight="500" orientation="Landscape" whenNoDataType="BlankPage" columnWidth="100" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" whenResourceMissingType="Empty" isIgnorePagination="true" uuid="1383142c-7f1e-40f7-b6d0-7043ca909e92">
-	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Calendarsub"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="CalendarsubActivite"/>
 	<property name="com.jaspersoft.studio.unit." value="pixel"/>
 	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
 	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
@@ -12,7 +12,7 @@
 	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
 	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
 	<parameter name="moisCourant" class="java.lang.Integer">
-		<defaultValueExpression><![CDATA[11]]></defaultValueExpression>
+		<defaultValueExpression><![CDATA[null]]></defaultValueExpression>
 	</parameter>
 	<queryString>
 		<![CDATA[]]>
@@ -74,7 +74,7 @@
 					<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement x="11" y="11" width="66" height="30" uuid="cc915796-c69c-4bbe-a627-4a0c8cdf4f87"/>
+					<reportElement x="11" y="12" width="66" height="30" uuid="cc915796-c69c-4bbe-a627-4a0c8cdf4f87"/>
 					<textFieldExpression><![CDATA[$F{intitule}]]></textFieldExpression>
 				</textField>
 				<textField>
@@ -84,6 +84,10 @@
 				<textField>
 					<reportElement x="53" y="54" width="16" height="17" uuid="77f2cc4c-d214-4b9f-9e7b-5a2fa43cddf9"/>
 					<textFieldExpression><![CDATA[$V{day}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="78" y="13" width="21" height="31" uuid="042d8838-ab4c-476e-b5e5-faec9211b69a"/>
+					<textFieldExpression><![CDATA[$P{moisCourant}]]></textFieldExpression>
 				</textField>
 			</frame>
 		</band>
