@@ -1,35 +1,45 @@
 package com.unis.jasper.controller;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
-import javax.servlet.http.HttpServletRequest;
-
+import org.springframework.context.annotation.Bean;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.unis.jasper.bean.CalendarPrincipal;
+import com.unis.jasper.bean.CalendarsubActivite;
 import com.unis.jasper.service.GenerateReport;
 
 import net.sf.jasperreports.engine.JRException;
+import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 
 @Controller
 public class ReportsController {
 	
 	private String name;
 
-	@RequestMapping(path = "/calendar", method = RequestMethod.GET)
-	public ResponseEntity<byte[]> reportsStatisticOrders(HttpServletRequest request) {
-	        Map<String, Object> parameters = new HashMap<>();
+	@RequestMapping( value = "/calendar" , method = RequestMethod.POST )
+	public ResponseEntity<byte[]> reportCalendar( @RequestBody CalendarPrincipal calendarPrincipal, @RequestBody CalendarsubActivite calendarsubActivite )  {
+	        Map<String, Object> parameters = new HashMap<>();	
+	        parameters.put("CalendarsubActivite", calendarsubActivite);
 	        
-	        
-	        
+	     // Populate this list of beans as per your requirements.
+	        List<CalendarPrincipal> beans = new ArrayList<>();
+	        beans.add(calendarPrincipal);
+
+	        // Wrap the beans in a beans in a JRBeanCollectionDataSource.
+	        JRBeanCollectionDataSource datasource = new JRBeanCollectionDataSource(beans);	        
 	        
 	        
 	        byte[] bytes = null;
 			try {
-				bytes = GenerateReport.Generate("CalendarPrincipal", parameters, null);
+				bytes = GenerateReport.Generate("CalendarPrincipal", parameters, datasource);
 			} catch (JRException e) {
 				e.printStackTrace();
 			}
