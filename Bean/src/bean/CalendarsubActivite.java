@@ -13,13 +13,13 @@ public class CalendarsubActivite {
 	
 	public CalendarsubActivite(String intitule, int jour, int mois, int annee, int valeurMille, int id, int type) {
 		super();
-		this.intitule = intitule;
-		this.jour = jour;
-		this.annee = annee;
-		this.mois = mois;
-		this.valeurMille = valeurMille;
-		this.id = id;
-		this.type = type;
+			this.intitule = intitule;
+			this.jour = jour;
+			this.annee = annee;
+			this.mois = mois;
+			this.valeurMille = valeurMille;
+			this.id = id;
+			this.type = type;
 	}
 	
 	public String getIntitule() {

@@ -1,5 +1,6 @@
 package com.unis.jasper.controller;
 
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -25,9 +26,11 @@ public class ReportsController {
 	private String name;
 
 	@RequestMapping( value = "/calendar" , method = RequestMethod.POST )
-	public ResponseEntity<byte[]> reportCalendar( @RequestBody CalendarPrincipal calendarPrincipal, @RequestBody CalendarsubActivite calendarsubActivite )  {
+	public ResponseEntity<byte[]> reportCalendar( @RequestBody CalendarPrincipal calendarPrincipal) throws URISyntaxException  {
 	        Map<String, Object> parameters = new HashMap<>();	
-	        parameters.put("CalendarsubActivite", calendarsubActivite);
+	        ArrayList<String> fileName = new ArrayList<String>();
+	        fileName.add("CalendarPrincipal");
+	        fileName.add("calendarsubactivite");
 	        
 	     // Populate this list of beans as per your requirements.
 	        List<CalendarPrincipal> beans = new ArrayList<>();
@@ -39,7 +42,7 @@ public class ReportsController {
 	        
 	        byte[] bytes = null;
 			try {
-				bytes = GenerateReport.Generate("CalendarPrincipal", parameters, datasource);
+				bytes = GenerateReport.Generate(fileName, parameters, datasource);
 			} catch (JRException e) {
 				e.printStackTrace();
 			}

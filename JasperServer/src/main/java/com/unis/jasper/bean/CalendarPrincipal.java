@@ -1,6 +1,6 @@
 package com.unis.jasper.bean;
 
-import net.sf.jasperreports.engine.JRDataSource;
+import java.util.List;
 
 public class CalendarPrincipal {
 	
@@ -9,9 +9,9 @@ public class CalendarPrincipal {
 	private int moisCourant;
 	private int anneeCourante;
 	
-	private JRDataSource activite;
+	private List<CalendarsubActivite> activite;
 	
-	public CalendarPrincipal(String nom, String prenom, int moisCourant, int anneeCourante, JRDataSource activite) {
+	public CalendarPrincipal(String nom, String prenom, int moisCourant, int anneeCourante, List<CalendarsubActivite> activite) {
 		super();
 		this.nom = nom;
 		this.prenom = prenom;
@@ -45,10 +45,10 @@ public class CalendarPrincipal {
 	public void setAnneeCourante(int anneeCourante) {
 		this.anneeCourante = anneeCourante;
 	}
-	public JRDataSource getActivite() {
+	public List<CalendarsubActivite> getActivite() {
 		return activite;
 	}
-	public void setActivite(JRDataSource activite) {
+	public void setActivite(List<CalendarsubActivite> activite) {
 		this.activite = activite;
 	}
 

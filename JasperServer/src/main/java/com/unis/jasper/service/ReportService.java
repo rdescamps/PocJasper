@@ -1,7 +1,9 @@
 package com.unis.jasper.service;
 
 import java.io.File;
+import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.net.URLDecoder;
@@ -60,6 +62,14 @@ public static boolean jasperFileExists(String file) {
 }
 
 public static String loadJrxmlFile(String file) {
+    try {
+		String x = new File(".").getCanonicalPath();
+		System.out.println("chemin en moment de load JRXML : = " + x);
+	} catch (IOException e1) {
+		e1.printStackTrace();
+	}
+    
+    
     String path = "";
     String tmpPath = folder + "/" + file + ".jrxml";
     URL url = ReportService.class.getResource(tmpPath);
@@ -72,16 +82,24 @@ public static String loadJrxmlFile(String file) {
 
 }
 
-public static File loadJasperFile(String file) {
+public static File loadJasperFile(String file) throws URISyntaxException {
 
-    String tmpPath = folder + "/" + file + ".jasper";
-    URL url = ReportService.class.getResource(tmpPath);
+    String tmpPath ="/src/main/resources/reports/" + file + ".jasper";
+    URI url = new URI(tmpPath);
+    System.out.println(tmpPath);
+    
+    
     File reportfile = null;
     try {
-        reportfile = new File(url.toURI().getPath());
-    } catch (URISyntaxException e) {
-        
-    }
+		String x = new File(".").getCanonicalPath();
+		System.out.println("chemin actuel pour chargement jasper file : = " + x);
+	} catch (IOException e1) {
+		e1.printStackTrace();
+	}
+    System.out.println();
+   
+    
+    reportfile = new File(file + ".jasper");
 
     return reportfile;
 }
