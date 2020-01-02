@@ -14,7 +14,7 @@
 	<field name="anneeCourante" class="java.lang.Integer">
 		<fieldDescription><![CDATA[anneeCourante]]></fieldDescription>
 	</field>
-	<field name="activite" class="net.sf.jasperreports.engine.JRDataSource">
+	<field name="activite" class="java.util.List">
 		<fieldDescription><![CDATA[activite]]></fieldDescription>
 	</field>
 	<field name="prenom" class="java.lang.String">
@@ -112,7 +112,7 @@
 					<subreportParameter name="moisCourant">
 						<subreportParameterExpression><![CDATA[$F{moisCourant}]]></subreportParameterExpression>
 					</subreportParameter>
-					<dataSourceExpression><![CDATA[$F{activite}]]></dataSourceExpression>
+					<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{activite})]]></dataSourceExpression>
 					<subreportExpression><![CDATA["calendarsubactivite.jasper"]]></subreportExpression>
 				</subreport>
 			</frame>
