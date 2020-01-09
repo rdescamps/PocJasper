@@ -48,7 +48,7 @@ public class GenerateReport {
 	public static byte[] Generate(ArrayList<String> fileName, Map<String, Object> params, JRDataSource dataSource) throws JRException, URISyntaxException {
 
 		byte[] bytes = null;
-		JasperReport jasperReport = null;
+		
 		ArrayList<JasperReport> reports = new ArrayList<>(); 
 		
 		try (ByteArrayOutputStream byteArray = new ByteArrayOutputStream()) {

@@ -28,7 +28,9 @@ public class ReportsController {
 	        Map<String, Object> parameters = new HashMap<>();	
 	        ArrayList<String> fileName = new ArrayList<>();
 	        fileName.add("CalendarPrincipal");
-	        fileName.add("calendarsubactivite");  
+	        fileName.add("CalendarSubActivite"); 
+	        
+	        
 	     // Populate this list of beans as per your requirements.
 	        List<CalendarPrincipal> beansPrinc = new ArrayList<>();
 	        beansPrinc.add(calendarPrincipal);

@@ -10,7 +10,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class mainController {
  
     
- 
+	@RequestMapping(value = {"/delete"}, method = RequestMethod.GET)
+	public void delete(){
+		JasperServerApplication.deleteDirectory("src/main/resources/reportsCompile/" );
+	}
 
  
     @RequestMapping(value = { "/", "/test" }, method = RequestMethod.GET)

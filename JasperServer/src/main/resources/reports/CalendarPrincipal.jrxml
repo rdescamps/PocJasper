@@ -20,6 +20,12 @@
 	<field name="prenom" class="java.lang.String">
 		<fieldDescription><![CDATA[prenom]]></fieldDescription>
 	</field>
+	<variable name="Date" class="java.time.LocalDate">
+		<variableExpression><![CDATA[java.time.LocalDate.of($F{anneeCourante},$F{moisCourant},1)]]></variableExpression>
+	</variable>
+	<variable name="MoisAnnee" class="java.lang.String">
+		<variableExpression><![CDATA[$V{Date}.format(java.time.format.DateTimeFormatter.ofPattern("MMMM yyyy"))]]></variableExpression>
+	</variable>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
@@ -113,25 +119,25 @@
 						<subreportParameterExpression><![CDATA[$F{moisCourant}]]></subreportParameterExpression>
 					</subreportParameter>
 					<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{activite})]]></dataSourceExpression>
-					<subreportExpression><![CDATA["calendarsubactivite.jasper"]]></subreportExpression>
+					<subreportExpression><![CDATA["src/main/resources/reportsCompile/" + "CalendarSubActivite.jasper"]]></subreportExpression>
 				</subreport>
 			</frame>
 			<textField>
-				<reportElement x="128" y="137" width="100" height="30" uuid="7d826691-4eb8-43d1-abfe-8ba295a89f0a"/>
+				<reportElement x="28" y="40" width="100" height="30" uuid="7d826691-4eb8-43d1-abfe-8ba295a89f0a"/>
 				<textFieldExpression><![CDATA[$F{nom}]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement x="28" y="137" width="100" height="30" uuid="7c53767d-d35e-4bbb-b9ab-9bdeaa55ec67"/>
-				<text><![CDATA[nom]]></text>
-			</staticText>
 			<textField>
-				<reportElement x="128" y="190" width="100" height="30" uuid="c054e8f3-015e-4980-a79c-9c262f5ba35c"/>
+				<reportElement x="128" y="40" width="100" height="30" uuid="c054e8f3-015e-4980-a79c-9c262f5ba35c"/>
 				<textFieldExpression><![CDATA[$F{prenom}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="28" y="190" width="100" height="30" uuid="ef493472-2ad9-4964-abac-e6cfc6eacccf"/>
-				<text><![CDATA[prenom]]></text>
+				<reportElement x="24" y="460" width="96" height="20" uuid="d729bdea-c477-4735-a53e-232f5ec42245"/>
+				<text><![CDATA[Rapport d'activité de]]></text>
 			</staticText>
+			<textField>
+				<reportElement x="120" y="460" width="96" height="20" uuid="5a4357ad-ea41-4dca-8740-239c4a9f0257"/>
+				<textFieldExpression><![CDATA[$V{MoisAnnee}]]></textFieldExpression>
+			</textField>
 		</band>
 	</detail>
 </jasperReport>
